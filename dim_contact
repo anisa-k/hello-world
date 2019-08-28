@@ -1,0 +1,5 @@
+  select PRIMARY_ROLE__C, Count(ID) from "PC_STITCH_DB"."SALESFORCE"."CONTACT" 
+  WHERE CONTACT_STATUS__C='Agent'OR 
+        CONTACT_STATUS__C='Separated'AND
+        COMPASS_MARKET__C !='Test Deployment Market'
+  GROUP BY PRIMARY_ROLE__C
